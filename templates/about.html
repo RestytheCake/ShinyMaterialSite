@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+{% load static %}
+{% load sass_tags %}
+<html>
+    <head>
+        <title>
+            Shiny Material / Developer
+        </title>
+        <link rel="stylesheet" href="{% static 'css/contacts.css' %}">
+		<link rel="icon" href="{% static 'img/Solar_dust.png' %}" />
+        <!--Global light & dark & mobile -->
+        <link rel="stylesheet" href="{% sass_src 'css/light/global.scss' %}">
+        <link rel="stylesheet" href="{% sass_src 'css/dark/global.scss' %}">
+        <link rel="stylesheet" href="{% sass_src 'css/mobile/global.scss' %}">
+        <!-- Top-Banner Light & Dark -->
+        <link rel="stylesheet" href="{% sass_src 'css/light/top-banner.scss' %}">
+        <link rel="stylesheet" href="{% sass_src 'css/dark/top-banner.scss' %}">
+        <!--End of scss-->
+
+        <script src="{% static 'js/ddMenu.js' %}"></script>
+    </head>
+    <!--Hardcore starts from here-->
+    <body>
+            {% include 'top-banner.html' %}
+
+                <div class="post">
+                    <label style="font-size: 24px; padding: 10px; color: rgb(23, 140, 148);"><b>Developer</b></label><br>
+                    <span>
+                        <li><a class='conlink' href="https://github.com/RestytheCake/">Resty</a></li>
+                        <li><a class='conlink' href="https://github.com/RestytheCake/">Morganischkalt</a></li>
+                    </span>
+                </div>
+
+                <div class="post">
+                    <label style="font-size: 24px; padding: 10px; color:rgb(23,140,148);"><b>Source Code</b></label><br>
+                    <span style="padding-tleft: 20">
+                        <li><a class='conlink' href="https://github.com/RestytheCake/Shiny_Material">GitHub - Mod Source Code</a></li>
+                        <li><a class='conlink' href="https://github.com/RestytheCake/ShinyMaterialSite">GitHub - Site Source Code</a></li>
+
+                    </span>
+                </div>
+
+                <div class="post">
+                    <label style="font-size: 24px; padding: 10px; color: rgb(23, 140, 148);"><b>Found an Issue or have Problems?</b></label><br>
+                    <span style="padding-left: 20px">
+                        <li><a href="https://github.com/RestytheCake/Shiny_Material/issues">Mod - Issue</a></li>
+                        <li><a href="https://github.com/RestytheCake/ShinyMaterialSite/issues">Site - Issue</a></li>
+                    </span>
+                </div>
+    </body>
+</html>

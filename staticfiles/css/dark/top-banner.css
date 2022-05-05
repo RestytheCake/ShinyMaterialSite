@@ -1,0 +1,35 @@
+@media (prefers-color-scheme: dark) {
+  .buttonTop {
+    padding: 1%;
+    width: 150px;
+    background-color: #792712;
+    border: 0px;
+    color: white;
+    font-size: 20px; }
+  .buttonTop:hover {
+    background-color: #eb6121; }
+  #scroll {
+    text-align: center;
+    background-color: #792712; }
+  #dropdown {
+    font-size: 20px;
+    margin-right: 30px;
+    position: relative;
+    display: inline-block; }
+  #dropdown:active {
+    color: gray; }
+  #dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #f1f1f1;
+    z-index: 1; }
+  #dropdown-content a {
+    color: black;
+    min-width: 60px;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block; }
+  #dropdown-content a:hover {
+    background-color: #ddd; } }
+
+/*# sourceMappingURL=top-banner.css.map */

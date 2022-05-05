@@ -1,0 +1,50 @@
+{% load static %}
+{% load sass_tags %}
+<html lang="en">
+    <head>
+        <title>
+            Shiny Material
+        </title>
+        <!-- Global light & Dark | Mobile -->
+        <link rel="stylesheet" href="{% sass_src 'css/light/global.scss' %}">
+        <link rel="stylesheet" href="{% sass_src 'css/dark/global.scss' %}">
+		<link rel="stylesheet" href="{% sass_src 'css/mobile/global.scss' %}">
+        <!-- Top-Banner Light & Dark | Mobile -->
+        <link rel="stylesheet" href="{% sass_src 'css/light/top-banner.scss' %}">
+        <link rel="stylesheet" href="{% sass_src 'css/dark/top-banner.scss' %}">
+        <link rel="stylesheet" href="{% sass_src 'css/mobile/top-banner.scss' %}">
+        <!-- Icon -->
+        <link rel="icon" href="{% static 'img/Solar_dust.png' %}" />
+        <!-- Meta data -->
+        <meta name="viewport" content="width=device-width"/>
+        <meta name="theme-color" content="#4285f4"/>
+        <meta name="description" content="Shiny Material WebSite">
+        <!-- JS -->
+        <script src="{% static 'js/ddMenu.js' %}"></script>
+    </head>
+    <!--Hardcore starts from here-->
+   <body>
+   <!-- Top-Banner HTML-->
+   {% include 'top-banner.html' %}
+
+   <!-- Post / Some Information in Main Page -->
+   <div class="post">
+       <label style="font-size: 24px; padding: 10px; color:rgb(23, 140, 148);"><b>Short Info</b></label><br>
+       <span class="thx"> ShinyMaterial is a Mod which will add :
+           <li>Ore's - New Strong and Hard to craft Ore's</li>
+           <li>Tools - New Tools stronger then default weapons</li>
+           <li>Armor - New Armor which can last longer</li>
+           <li>Structure's - New generated Structure's in the Nether</li>
+           <li>food - New food with Special Effects</li>
+
+       </span>
+   </div>
+
+   <div class="post">
+       <label style="font-size: 24px; padding: 10px; color:rgb(23, 140, 148);"><b>Last Update</b></label><br>
+       <span>Added New Structure to the Nether</span>
+   </div>
+   
+   <!-- Information Ends Here -->
+   </body>
+</html>

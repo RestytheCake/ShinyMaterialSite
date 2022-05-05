@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+{% load sass_tags %}
+{% load static %}
+<html>
+    <head>
+        <title>
+            Shiny Material / Posts
+        </title>
+        <link rel="stylesheet" href="{% static 'css/nick.css' %}">
+		<link rel="icon" href="{% static 'img/Solar_dust.png' %}" />
+        <!--Global light & dark & mobile -->
+        <link rel="stylesheet" href="{% sass_src 'css/light/global.scss' %}">
+        <link rel="stylesheet" href="{% sass_src 'css/dark/global.scss' %}">
+        <link rel="stylesheet" href="{% sass_src 'css/mobile/global.scss' %}">
+        <!-- Top-Banner Light & Dark -->
+        <link rel="stylesheet" href="{% sass_src 'css/light/top-banner.scss' %}">
+        <link rel="stylesheet" href="{% sass_src 'css/dark/top-banner.scss' %}">
+        <!--End of scss-->
+
+        <script src="{% static 'js/ddMenu.js' %}"></script>
+    </head>
+    <!--Hardcore starts from here-->
+    <body>
+        {% include 'top-banner.html' %}
+            <div class="main">
+                <form action="{% url 'ShinyMaterial:searchworker' %}" method="get">
+                <div id="search">
+                    <input type="search" name="User" id="searchBar" placeholder="Quick Search">
+                    <button type="submit" id="searchButton"><img  style="width: 25px; height: 25px;" src="{% static 'img/search.png' %}"></button>
+                </div>
+            </form>
+                <div class="post">
+                    <label style="font-size: 24px; padding: 10px; color:rgb(23, 140, 148);"><b></b></label><br>
+                        <span>
+                            Nothing was posted here
+                        </span>
+                </div>
+            </div>
+    </body>

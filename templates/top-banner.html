@@ -1,0 +1,33 @@
+{% load static %}
+<div id="topBanner">
+    <div>
+        {% if request.user.is_authenticated %}
+            <div id="dropdown"  style="float: right; margin-right: 70px; margin-top: 20px">
+                <label onclick="ddMenu()">{{ request.user.username }}</label>
+                <div  id="dropdown-content">
+                    <a href="{% url 'ShinyMaterial:profile' %}?user={{ request.user.username }}" style="float: left;">Profile</a>
+                    <a href="{% url 'ShinyMaterial:notification' %}" style="float: left;">Notification</a>
+                    <a href="{% url 'ShinyMaterial:settings' %}" style="float: left;">Settings</a>
+                    <a href="{% url 'ShinyMaterial:logout' %}" style="float: left;">Logout</a>
+                </div>
+            </div>
+        {% else %}
+            <div id="dropdown"  style="float: right; margin-right: 70px; margin-top: 20px">
+                <label onclick="ddMenu()">New ?</label>
+                <div  id="dropdown-content">
+                    <a href="{% url 'ShinyMaterial:register' %}" style="float: left;">Register</a>
+                    <a href="{% url 'ShinyMaterial:logout' %}" style="float: left;">Login</a>
+                </div>
+            </div>
+        {% endif %}
+    </div>
+</div>
+<!-- Buttons for Top-Banner -->
+<div id="scroll">
+    <button class="buttonTop" onClick="window.location='{% url 'ShinyMaterial:home' %}';">Home</button>
+    <button class="buttonTop" onClick="window.location='{% url 'ShinyMaterial:video' %}';">Videos</button>
+    <button class="buttonTop" onClick="window.location='{% url 'ShinyMaterial:forum' %}';">Forum</button>
+    <button class="buttonTop" onClick="window.location='{% url 'ShinyMaterial:posts' %}';">Post</button>
+    <button class="buttonTop" onClick="window.location='{% url 'ShinyMaterial:about' %}';">Developer</button>
+</div>
+<!-- End for Buttons -->
